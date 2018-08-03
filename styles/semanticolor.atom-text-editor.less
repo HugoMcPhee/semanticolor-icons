@@ -1,0 +1,441 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import 'syntax-variables';
+@import 'semanticolor';
+
+.syntax--semanticolor-mute {
+	color: mix(@syntax-text-color, @syntax-background-color, 85%);
+}
+
+.syntax--semanticolor-contrast {
+	color: @syntax-background-color;
+	background-color: @syntax-text-color;
+}
+
+.syntax--identifier {
+	.color-indices(@hues);
+
+	.color-indices( @n, @i:1) when (@i =< @n) {
+		@hue: @i * (360 / @n);
+		@color: hsl(@hue, @saturation, @luminosity);
+
+		&.syntax--semanticolor-@{i} {
+			&:not(.syntax--bg) {
+				// Choose a color of the given hue with good contrast
+				color: contrast(
+					@syntax-background-color,
+					tint(@color, @fade),
+					shade(@color, @fade)
+				) !important;
+			}
+			&:not(.syntax--bg)::before {
+				// Choose a color of the given hue with good contrast
+				color: contrast(
+					@syntax-background-color,
+					tint(@color, @fade),
+					shade(@color, @fade)
+				) !important;
+			}
+			&.syntax--bg {
+				// color: @syntax-text-color !important;
+				// color: @syntax-text-color;
+				// color: @syntax-text-color;
+				color: tint(desaturate(darken(@color, 13%), 29%), 9%) !important;
+				background-color: contrast(
+					@syntax-text-color,
+					tint(@color, @fade),
+					shade(@color, @fade)
+				) !important;
+			}
+			&.syntax--bg::before {
+				// color: @syntax-text-color !important;
+				// color: @syntax-text-color;
+				// color: @syntax-text-color;
+				// color: desaturate(darken(@color, 13%), 32%) !important;
+				// color: tint(desaturate(darken(@color, 13%), 29%), 9%) !important;
+				color: tint(desaturate(darken(@color, 10%), 30%), 10%) !important;
+				color: tint(desaturate(darken(@color, 11%), 30%), 11%) !important;
+			}
+		}
+		.color-indices(@n, @i + 1);
+	}
+}
+
+@hues: 673;
+@saturation: 79%;
+@luminosity: 82%;
+@fade: 40%;
+
+.syntax--semanticon::before {
+	opacity: 1;
+	background-color: transparent;
+	font-family: FontAwesome;
+	padding-right: ~'0.25em';
+	font-style: normal;
+	font-size: 0.8em;
+	// font-size: 16px;
+}
+
+.syntax--semanticon.syntax--prop::before {
+	// content: "👜";
+	// content: "\f290";
+	content: '\f291';
+}
+.syntax--semanticon.syntax--loop::before {
+	// content: "👜";
+	content: '\f021';
+}
+.syntax--semanticon.syntax--array::before {
+	// content: "👜";
+	content: '\f0ca';
+}
+.syntax--semanticon.syntax--new::before {
+	// content: "👜";
+	content: '\f005';
+}
+.syntax--semanticon.syntax--text::before {
+	// content: "👜";
+	// content: "\f15c";
+	content: '\f27a';
+}
+.syntax--semanticon.syntax--length::before {
+	font-family: Segoe UI Symbol;
+	// content: "\f15c"; ↔↕
+	// content: "↔";
+	// content: "📏📐";
+	content: '📏';
+}
+.syntax--semanticon.syntax--key::before {
+	// content: "🔑";
+	content: '\f084';
+}
+.syntax--semanticon.syntax--style::before {
+	// content: "🔑";
+	content: '\f1fc';
+}
+.syntax--semanticon.syntax--event::before {
+	font-family: Segoe UI Symbol;
+	content: '👏';
+}
+.syntax--semanticon.syntax--options::before {
+	content: '\f1de';
+}
+.syntax--semanticon.syntax--global::before {
+	content: '\f0ac';
+}
+.syntax--semanticon.syntax--identification::before {
+	// id icons are only in newer font-awesome
+	// content: "\f2bb";
+	// content: "\f2c2";
+	content: '\f2c1';
+}
+.syntax--semanticon.syntax--state::before {
+	font-family: Segoe UI Symbol;
+	// content: "🚥";
+	content: '🚦';
+}
+.syntax--semanticon.syntax--color::before {
+	font-family: Segoe UI Symbol;
+	content: '🎨';
+}
+.syntax--semanticon.syntax--page::before {
+	content: '\f15b';
+}
+.syntax--semanticon.syntax--link::before {
+	content: '\f0c1';
+}
+.syntax--semanticon.syntax--chain::before {
+	content: '\f0c1';
+}
+.syntax--semanticon.syntax--location::before {
+	content: '\f041';
+}
+.syntax--semanticon.syntax--history::before {
+	content: '\f1da';
+}
+.syntax--semanticon.syntax--tag::before {
+	content: '\f02b';
+}
+.syntax--semanticon.syntax--item::before {
+	content: '\f12e';
+}
+.syntax--semanticon.syntax--value::before {
+	content: '\f06b';
+}
+.syntax--semanticon.syntax--info::before {
+	content: '\f05a';
+}
+.syntax--semanticon.syntax--user::before {
+	content: '\f007';
+}
+.syntax--semanticon.syntax--container::before {
+	content: '\f2d0';
+}
+.syntax--semanticon.syntax--image::before {
+	content: '\f03e';
+}
+.syntax--semanticon.syntax--path::before {
+	// content: "\f07c";
+	content: '\f07b';
+}
+.syntax--semanticon.syntax--child::before {
+	content: '\f1ae';
+}
+.syntax--semanticon.syntax--order::before {
+	content: '\f160';
+}
+.syntax--semanticon.syntax--className::before {
+	content: '\f1fc';
+}
+.syntax--semanticon.syntax--group::before {
+	content: '\f0c0';
+}
+.syntax--semanticon.syntax--this::before {
+	content: '\f0ab';
+}
+.syntax--semanticon.syntax--width::before {
+	content: '\f07e';
+}
+.syntax--semanticon.syntax--height::before {
+	content: '\f07d';
+}
+.syntax--semanticon.syntax--top::before {
+	content: '\f062';
+}
+.syntax--semanticon.syntax--bottom::before {
+	content: '\f063';
+}
+.syntax--semanticon.syntax--left::before {
+	content: '\f060';
+}
+.syntax--semanticon.syntax--right::before {
+	content: '\f061';
+}
+.syntax--semanticon.syntax--size::before {
+	content: '\f0b2';
+}
+.syntax--semanticon.syntax--position::before {
+	content: '\f276';
+}
+.syntax--semanticon.syntax--object::before {
+	// content: "\f0f2";
+	content: '\f290';
+}
+.syntax--semanticon.syntax--data::before {
+	// content: "\f1c0";
+	// content: "\f200";
+	content: '\f1fe';
+}
+.syntax--semanticon.syntax--tags::before {
+	content: '\f02c';
+}
+.syntax--semanticon.syntax--element::before {
+	content: '\f2d2';
+}
+.syntax--semanticon.syntax--home::before {
+	content: '\f015';
+}
+.syntax--semanticon.syntax--timer::before {
+	content: '\f251';
+}
+
+.syntax--semanticon.syntax--title::before {
+}
+.syntax--semanticon.syntax--connect::before {
+	content: '\f2b5';
+}
+.syntax--semanticon.syntax--head::before {
+	font-family: Segoe UI Symbol;
+	content: '👤';
+}
+.syntax--semanticon.syntax--foot::before {
+	font-family: Segoe UI Symbol;
+	content: '👣';
+}
+.syntax--semanticon.syntax--handle::before {
+	font-family: Segoe UI Symbol;
+	content: '👏';
+}
+.syntax--semanticon.syntax--target::before {
+	content: '\f192';
+}
+.syntax--semanticon.syntax--action::before {
+	font-family: Segoe UI Symbol;
+	content: '👏';
+}
+.syntax--semanticon.syntax--name::before {
+	content: '\f02b';
+}
+.syntax--semanticon.syntax--speed::before {
+	content: '\f0e4';
+}
+.syntax--semanticon.syntax--cache::before {
+	content: '\f1cd';
+}
+.syntax--semanticon.syntax--remove::before {
+	content: '\f1f8';
+}
+.syntax--semanticon.syntax--layer::before {
+	content: '\f249';
+}
+.syntax--semanticon.syntax--layers::before {
+	content: '\f0c5';
+}
+.syntax--semanticon.syntax--content::before {
+}
+.syntax--semanticon.syntax--bar::before {
+}
+.syntax--semanticon.syntax--camera::before {
+	content: '\f03d';
+}
+.syntax--semanticon.syntax--light::before {
+	// content: "\f0eb";
+	font-family: Segoe UI Symbol;
+	// content: "💡";
+	content: '☀️';
+}
+.syntax--semanticon.syntax--scene::before {
+	content: '\f03e';
+	// font-family: Segoe UI Symbol;
+	// content: "🌅🌄";
+	// content: "🗻";
+}
+.syntax--semanticon.syntax--mesh::before {
+	// content: "\f4d3";
+	// content: "\f1b3";
+	font-family: Segoe UI Symbol;
+	content: '🐤';
+}
+.syntax--semanticon.syntax--visible::before {
+	content: '\f06e';
+}
+.syntax--semanticon.syntax--up::before {
+	content: '\f062';
+}
+.syntax--semanticon.syntax--down::before {
+	content: '\f063';
+}
+.syntax--semanticon.syntax--div::before {
+	// content: "\f0c8";
+	content: '\f0c8';
+}
+.syntax--semanticon.syntax--click::before {
+	content: '\f0a7';
+}
+.syntax--semanticon.syntax--add::before {
+	content: '\f055';
+}
+.syntax--semanticon.syntax--package::before {
+	// content: "\f466"; new font awesome
+	content: '\f187';
+}
+.syntax--semanticon.syntax--bug::before {
+	content: '\f188';
+}
+.syntax--semanticon.syntax--storage::before {
+	content: '\f187';
+	// content: "\f468";
+	// content: "\f54e";
+}
+.syntax--semanticon.syntax--direction::before {
+	content: '\f14e';
+}
+.syntax--semanticon.syntax--change::before {
+	// content: "\f362"; // new font awesome exchange icon
+	// content: "\f2f1"; // new font awesome sync
+	content: '\f021';
+}
+.syntax--semanticon.syntax--warn::before {
+	content: '\f071';
+}
+.syntax--semanticon.syntax--search::before {
+	content: '\f002';
+}
+.syntax--semanticon.syntax--check::before {
+	content: '\f058';
+	// content: "\f46c"; only in new font awesome
+}
+.syntax--semanticon.syntax--calculate::before {
+	content: '\f1ec';
+}
+.syntax--semanticon.syntax--sleep::before {
+	content: '\f236';
+}
+.syntax--semanticon.syntax--clean::before {
+	content: '\f2cd';
+	// content: "\f51a";
+}
+.syntax--semanticon.syntax--undo::before {
+	// content: "\f2ea"; more rounded for new fontawesome
+	content: '\f0e2';
+}
+.syntax--semanticon.syntax--random::before {
+	// content: "\f074";
+	// content: "\f522"; multiple dice in new font awesome
+	// content: "\f528";
+	// content: "\f525";
+	font-family: Segoe UI Symbol;
+	content: '🎲';
+}
+.syntax--semanticon.syntax--load::before {
+	content: '\f251';
+	// content: "\f4de"; newr font awesome truck loading
+}
+.syntax--semanticon.syntax--filter::before {
+	content: '\f0b0';
+}
+.syntax--semanticon.syntax--save::before {
+	content: '\f0c7';
+}
+.syntax--semanticon.syntax--keyboard::before {
+	content: '\f11c';
+}
+.syntax--semanticon.syntax--desktop::before {
+	content: '\f108';
+}
+.syntax--semanticon.syntax--mobile::before {
+	content: '\f10b';
+}
+.syntax--semanticon.syntax--tablet::before {
+	content: '\f10a';
+}
+.syntax--semanticon.syntax--transform::before {
+	content: '\f0b2';
+}
+.syntax--semanticon.syntax--transition::before {
+	content: '\f008';
+}
+.syntax--semanticon.syntax--edit::before {
+	// content: "\f303"; new fontawesome
+	// content: "\f044";
+	content: '\f14b';
+}
+.syntax--semanticon.syntax--construct::before {
+	content: '\f0e3';
+}
+.syntax--semanticon.syntax--super::before {
+	content: '\f0d8';
+}
+.syntax--semanticon.syntax--fix::before {
+	content: '\f462';
+}
+.syntax--semanticon.syntax--border::before {
+	content: '\f065';
+}
+.syntax--semanticon.syntax--disable::before {
+	content: '\f05e';
+}
+.syntax--semanticon.syntax--next::before {
+	content: '\f0a4';
+}
+.syntax--semanticon.syntax--previous::before {
+	content: '\f0a5';
+}
+.syntax--semanticon.syntax--complete::before {
+	content: '\f058';
+}
+.syntax--semanticon.syntax--render::before {
+	content: '\f030';
+}
