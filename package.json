@@ -1,16 +1,16 @@
 {
 	"name": "semanticolor-icons",
 	"main": "./lib/semanticolor.js",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"description": "A fork of semanticolor with icons next to the colored words",
 	"keywords": [],
-	"repository": "https://github.com/atom/semanticolor-icons",
+	"repository": "https://github.com/HugoMcPhee/semanticolor-icons",
 	"license": "MIT",
 	"engines": {
 		"atom": ">=1.0.0 <2.0.0"
 	},
 	"bugs": {
-		"url": "https://github.com/atom/semanticolor-icons"
+		"url": "https://github.com/HugoMcPhee/semanticolor-icons/issues"
 	},
 	"dependencies": {
 		"debug": "^2.4.5",
@@ -25,7 +25,7 @@
 	"engines": {
 		"atom": ">=1.0.0 <2.0.0"
 	},
-	"homepage": "https://github.com/atom/semanticolor-icons#readme",
+	"homepage": "https://github.com/HugoMcPhee/semanticolor-icons#readme",
 	"keywords": [
 		"semantic",
 		"icon",
@@ -43,7 +43,7 @@
 	"readmeFilename": "README.md",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/atom/semanticolor-icons.git"
+		"url": "git+https://github.com/HugoMcPhee/semanticolor-icons.git"
 	},
 	"styleSheets": [
 		"semanticolor.atom-text-editor.less"
