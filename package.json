@@ -1,7 +1,7 @@
 {
   "name": "semanticolor-icons",
   "main": "./lib/semanticolor.js",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "A fork of semanticolor with icons next to the colored words",
   "keywords": [
     "semantic",
