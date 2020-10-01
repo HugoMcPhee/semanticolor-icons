@@ -1,7 +1,7 @@
 {
   "name": "semanticolor-icons",
   "main": "./lib/semanticolor.js",
-  "version": "0.11.0",
+  "version": "3.7.0",
   "description": "A fork of semanticolor with icons next to the colored words",
   "keywords": [
     "semantic",
@@ -19,22 +19,25 @@
     "type": "git",
     "url": "https://github.com/HugoMcPhee/semanticolor-icons.git"
   },
+  "bugs": {
+    "url": "https://github.com/HugoMcPhee/semanticolor-icons/issues"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "bugs": {
-    "url": "https://github.com/HugoMcPhee/semanticolor-icons/issues"
-  },
+  "styleSheets": [
+    "semanticolor.atom-text-editor.less"
+  ],
   "dependencies": {
-    "debug": "^2.4.5",
+    "debug": "^2.6.9",
     "lodash": "^4.13.1",
     "murmurhash3js": "^3.0.1",
     "semver": "^5.3.0",
     "sugar": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.12.2"
+    "eslint": "^4.18.2"
   },
   "homepage": "https://github.com/HugoMcPhee/semanticolor-icons#readme",
   "optionalDependencies": {},
