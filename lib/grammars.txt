@@ -1,54 +1,8 @@
-Babel ES6 JavaScript (language-babel) - TextMate
-C (language-c) - TextMate
-C++ (language-c) - TextMate
-CoffeeScript (Literate) (language-coffee-script) - TextMate
-CoffeeScript (language-coffee-script) - TextMate
-C# Cake File (language-csharp) - TextMate
-C# (language-csharp) - TextMate
-C# Script File (language-csharp) - TextMate
-CSS (language-css) - TextMate
-Git Config (language-git) - TextMate
-Go Module File (language-go) - TextMate
-HTML (language-html) - TextMate
-JavaServer Pages (language-java) - TextMate
-Java (language-java) - TextMate
-Java Properties (language-java) - TextMate
-JavaScript (language-javascript) - TextMate
-Clojure (language-clojure) - TextMate
-Less (language-less) - TextMate
-Makefile (language-make) - TextMate
-Objective-C (language-objective-c) - TextMate
-Objective-C++ (language-objective-c) - TextMate
-Strings File (Objective-C) (language-objective-c) - TextMate
-Perl 6 (language-perl) - TextMate
-Perl (language-perl) - TextMate
-PHP (language-php) - TextMate
-Property List (Old-Style) (language-property-list) - TextMate
-Python (language-python) - TextMate
-Regular Expressions (Python) (language-python) - TextMate
-Gemfile (language-ruby) - TextMate
-Ruby (language-ruby) - TextMate
-JavaScript (Rails) (language-ruby-on-rails) - TextMate
-Ruby on Rails (RJS) (language-ruby-on-rails) - TextMate
-Ruby on Rails (language-ruby-on-rails) - TextMate
-Sass (language-sass) - TextMate
-SCSS (language-sass) - TextMate
-SQL (language-sql) - TextMate
-TOML (language-toml) - TextMate
-Go Checksum File (language-go) - TextMate
-SQL (Rails) (language-ruby-on-rails) - TextMate
-Go (language-go) - TextMate
-YAML (language-yaml) - TextMate
-XML (language-xml) - TextMate
-TypeScript (language-typescript) - TextMate
-TypeScriptReact (language-typescript) - TextMate
-GLSL (language-glsl) - TextMate
 semanticolor - JavaScript (semanticolor) - TextMate
 semanticolor - Babel ES6 JavaScript (semanticolor) - TextMate
 semanticolor - C (semanticolor) - TextMate
 semanticolor - C++ (semanticolor) - TextMate
 semanticolor - Clojure (semanticolor) - TextMate
-semanticolor - CoffeeScript (Literate) (semanticolor) - TextMate
 semanticolor - CoffeeScript (semanticolor) - TextMate
 semanticolor - C# Cake File (semanticolor) - TextMate
 semanticolor - C# (semanticolor) - TextMate
@@ -66,19 +20,13 @@ semanticolor - Less (semanticolor) - TextMate
 semanticolor - Makefile (semanticolor) - TextMate
 semanticolor - Objective-C (semanticolor) - TextMate
 semanticolor - Objective-C++ (semanticolor) - TextMate
-semanticolor - Strings File (Objective-C) (semanticolor) - TextMate
 semanticolor - Perl 6 (semanticolor) - TextMate
 semanticolor - Perl (semanticolor) - TextMate
 semanticolor - PHP (semanticolor) - TextMate
-semanticolor - Property List (Old-Style) (semanticolor) - TextMate
 semanticolor - Python (semanticolor) - TextMate
-semanticolor - Regular Expressions (Python) (semanticolor) - TextMate
 semanticolor - Gemfile (semanticolor) - TextMate
 semanticolor - Ruby (semanticolor) - TextMate
-semanticolor - JavaScript (Rails) (semanticolor) - TextMate
-semanticolor - Ruby on Rails (RJS) (semanticolor) - TextMate
 semanticolor - Ruby on Rails (semanticolor) - TextMate
-semanticolor - SQL (Rails) (semanticolor) - TextMate
 semanticolor - Sass (semanticolor) - TextMate
 semanticolor - SCSS (semanticolor) - TextMate
 semanticolor - SQL (semanticolor) - TextMate
@@ -88,3 +36,60 @@ semanticolor - YAML (semanticolor) - TextMate
 semanticolor - TypeScript (semanticolor) - TextMate
 semanticolor - TypeScriptReact (semanticolor) - TextMate
 semanticolor - GLSL (semanticolor) - TextMate
+C (language-c) - tree-sitter
+C++ (language-c) - tree-sitter
+HTML (language-html) - tree-sitter
+JavaScript (language-javascript) - tree-sitter
+Flow JavaScript (language-typescript) - tree-sitter
+TypeScript (language-typescript) - tree-sitter
+Ruby (language-ruby) - tree-sitter
+Rust (language-rust-bundled) - tree-sitter
+CSS (language-css) - tree-sitter
+Go (language-go) - tree-sitter
+Java (language-java) - tree-sitter
+Python (language-python) - tree-sitter
+TypeScriptReact (language-typescript) - tree-sitter
+Babel ES6 JavaScript (language-babel) - TextMate
+C (language-c) - TextMate
+C++ (language-c) - TextMate
+Clojure (language-clojure) - TextMate
+CoffeeScript (Literate) (language-coffee-script) - TextMate
+CoffeeScript (language-coffee-script) - TextMate
+C# Cake File (language-csharp) - TextMate
+C# (language-csharp) - TextMate
+C# Script File (language-csharp) - TextMate
+CSS (language-css) - TextMate
+Git Config (language-git) - TextMate
+Go (language-go) - TextMate
+Go Module File (language-go) - TextMate
+Go Checksum File (language-go) - TextMate
+HTML (language-html) - TextMate
+JavaServer Pages (language-java) - TextMate
+Java (language-java) - TextMate
+Java Properties (language-java) - TextMate
+JavaScript (language-javascript) - TextMate
+Less (language-less) - TextMate
+Makefile (language-make) - TextMate
+Objective-C (language-objective-c) - TextMate
+Objective-C++ (language-objective-c) - TextMate
+Strings File (Objective-C) (language-objective-c) - TextMate
+Perl 6 (language-perl) - TextMate
+Perl (language-perl) - TextMate
+PHP (language-php) - TextMate
+Property List (Old-Style) (language-property-list) - TextMate
+Python (language-python) - TextMate
+Regular Expressions (Python) (language-python) - TextMate
+Gemfile (language-ruby) - TextMate
+Ruby (language-ruby) - TextMate
+JavaScript (Rails) (language-ruby-on-rails) - TextMate
+Ruby on Rails (RJS) (language-ruby-on-rails) - TextMate
+Ruby on Rails (language-ruby-on-rails) - TextMate
+SQL (Rails) (language-ruby-on-rails) - TextMate
+Sass (language-sass) - TextMate
+SCSS (language-sass) - TextMate
+SQL (language-sql) - TextMate
+TOML (language-toml) - TextMate
+TypeScript (language-typescript) - TextMate
+TypeScriptReact (language-typescript) - TextMate
+XML (language-xml) - TextMate
+YAML (language-yaml) - TextMate
